@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <title>Generative AI for 2D Character Animation</title>
+  <meta name="description" content="In this pilot project, we teamed up with artists to develop new workflows for 2D animation while producing a short educational cartoon. We identified several workflows to streamline the animation process, bringing the artists' vision to the screen more effectively.">
+  <meta name="keywords" content="Generative AI, generative AI, generative, 2D character animation, character animation, animation">
+
+  <meta property="twitter:title" content="Generative AI for 2D Character Animation" />
+  <meta property="twitter:description" content="In this pilot project, we teamed up with artists to develop new workflows for 2D animation while producing a short educational cartoon. We identified several workflows to streamline the animation process, bringing the artists' vision to the screen more effectively." />
+  <meta property="twitter:image" content="https://genai-2d-character-animation.github.io/assets/banner.jpg" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Generative AI for 2D Character Animation">
+  <meta property="og:url" content="https://genai-2d-character-animation.github.io/"/>
+  <meta property="og:image" content="https://genai-2d-character-animation.github.io/assets/banner.jpg" />
+
+  <!-- Google tag (gtag.js)
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3LCW3JHW2E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3LCW3JHW2E');
+  </script> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!-- popper used for tooltips -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- bootstrap styling used for carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
+
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/interactions.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body" style="padding: 3rem 1.5rem 0.5rem 1.5rem;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Generative AI for 2D Character Animation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://linkedin.com/in/jaimeguajardo" target="_blank">Jaime Guajardo</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/ozgunbu" target="_blank">Ozgun Bursalioglu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com" target="_blank">Dan B Goldman</a>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Google Research</span>
+          </div>
+
+<!--          <div class="is-size-5 publication-authors">
+            <br>
+            <span class="author-block"><b>SIGGRAPH 2024 poster</b></span>
+          </div>
+-->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv" aria-hidden="true"></i>
+                  </span>
+                  <span>arXiv (coming soon!)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=J2LTbvJLRf0" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+					  <i class="fab fa-youtube" aria-hidden="true"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#scripts" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+					  <i class="fa fa-file-pdf" aria-hidden="true"></i>
+                  </span>
+                  <span>Scripts</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section style="padding: 1.5rem 1.5rem 3rem 3rem;" class="section">
+  <div class="container is-max-desktop">
+    <div class="teaser-caption caption columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <img src="assets/replay.png" />
+        <span class="replay">Replay Video.</span> -->
+        <span><b>TL;DR: </b>In this pilot project, we teamed up with artists to develop new workflows for 2D animation while producing a short educational cartoon. We identified several workflows to streamline the animation process, bringing the artists' vision to the screen more effectively.</span>
+      </div>
+    </div>
+    <div class="results-grid">
+      <div class="results-single">
+        <video id="teaser" playsinline controls>
+          <source src="assets/supp_video_v003.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 style="margin-top: 2.5rem;" class="title is-4">Introduction</h2>
+        <div class="content has-text-justified">
+          <p>
+            We produced a short educational cartoon using novel generative AI workflows. Educational videos are under-served relative to entertainment videos, and educators don't generally have the skill or talent to produce animations that teach real concepts. We adopted a 2D style because it can be more forgiving of the kind of geometric inconsistencies that generative AI sometimes produces, which limit the perceived quality of realistic or 3D-style imagery. Our narrative occurs in a fantasy world with some non-human characters, giving further flexibility for variable appearance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Abstract -->
+
+<!-- Workflows -->
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+	  <div class="columns is-centered has-text-centered">
+		  <div class="column is-four-fifths">
+			  <h2 class="title is-4">Workflows</h2>
+			  <div class="content has-text-justified">
+				  <p>
+					  Previous generative animation projects have focused on automating story simulation and visual design, but in this work, our goal is to accelerate the process of character animation. We identified several promising workflows, bringing artists' vision to the screen more effectively.
+				  </p>
+			  </div>
+		  </div>
+	  </div>
+	 <div class="results-grid">
+	   <div class="results-single">
+	  	  <img src="assets/workflows.png"></img>
+	   </div>
+	 </div>
+		 
+  </div>
+</section>
+<!-- Workflows -->
+
+<!-- Scripts -->
+<hr>
+<section class="section" id="scripts">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 is-centered has-text-centered">Episode Scripts</h2>
+	<ul>
+		<li><a href="assets/scripts/101.FINAL.2.28.24.pdf" target="_blank">Potential Disaster</a></li>
+		<li><a href="assets/scripts/102.FINAL.4.10.24.pdf" target="_blank">El Diablo Freezes Over</a></li>
+		<li><a href="assets/scripts/103.FINAL.4.9.24.pdf" target="_blank">Magnormous</a></li>
+		<li><a href="assets/scripts/104.FINAL.4.5.24.pdf" target="_blank">Bloodline Gang</a></li>
+		<li><a href="assets/scripts/105.FINAL.4.2.24.pdf" target="_blank">Vanishing Verna</a></li>
+		<li><a href="assets/scripts/106.FINAL.4.2.24.pdf" target="_blank">Firefly's Return</a></li>
+	</ul>
+  </div>
+</section>
+<!-- Scripts -->
+
+<hr>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-4">Acknowledgements</h2>
+    <span>
+      Thanks to the Not-So-Supervillains creative and production crew: Jason Mayland, Kelly McNutt, Woei Lee, Gabe Liu, David Andrews, Eloise Fassler, Kavitha Gopalakrishnan, HOPR. Voice talent: Kory Mathewson, Warren Reid, Kiara Lee, Andru Anderson. Brain trust: Kory Mathewson, Cassidy Curtis, Alonso Martinez, Anna Kipnis. PM: Thomas Iljic.
+    </span>
+    <h2 class="title is-4">BibTeX</h2>
+    <pre><code>
+    @misc{guajardo2024,
+      title={Generative AI for 2D Character Animation},
+      author={Jaime Guajardo and Ozgun Bursalioglu and Dan B Goldman},
+      eprint={####.#####},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      year={2024}
+    }
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website template is based on the
+            <a href="https://nerfies.github.io">Nerfies</a> and <a href="https://readout-guidance.github.io">Readout Guidance</a>
+            project pages.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+</script>
+<!-- <script>
+  const replay = document.querySelector('.replay');
+  replay.addEventListener('click', () => {
+      const video = document.getElementById("teaser")
+      video.currentTime = 0;
+      video.play();
+  });
+</script> -->
+</body>
+</html>
